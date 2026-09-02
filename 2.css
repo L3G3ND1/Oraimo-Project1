@@ -1,0 +1,1669 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.chatbot img {
+    width: 100%;
+
+}
+
+.chatbot {
+    position: fixed;
+    right: 20px;
+    top: 79%;
+    transform: translateY(-50%);
+    width: 3.8%;
+    height: auto;
+    z-index: 1000;
+}
+
+/*Nav-bar*/
+
+nav {
+    padding: 10px 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+}
+
+.x {
+    padding: 0px 20px;
+}
+
+.img2 {
+    padding-right: 40px;
+}
+
+
+.notice-bar span {
+
+    padding-left: 100%;
+    animation: slide 15s linear infinite;
+}
+
+/*notice-bar slide*/
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+
+    }
+}
+
+.notice-bar {
+    text-wrap: nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    width: 53%;
+}
+
+.oraimo-logo,
+.mobile-nav {
+    margin: 15px 0 0;
+    height: 50px;
+    width: 224px;
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+.oraimo-logo img,
+.mobile-nav img {
+    display: block;
+    animation: logo-switch 4s linear infinite;
+}
+
+@keyframes logo-switch {
+
+    0%,
+    45% {
+        transform: translateY(0);
+    }
+
+    50%,
+    95% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Bottom Navigation */
+.bottom-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav ul li {
+    position: relative;
+    margin-right: 45px;
+    padding: 18px 0;
+}
+
+.bottom-nav ul li a {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+/*Green underline*/
+.bottom-nav>ul>li>a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    width: 0;
+    height: 3px;
+    background: #82E600;
+    transition: .3s ease;
+}
+
+.bottom-nav ul li:hover>a::after {
+    width: 100%;
+}
+
+/*dropdown*/
+
+.occasion-dropdown {
+    position: absolute;
+    top: 114px;
+    right: 0;
+    border-radius: 12px;
+
+    width: 220px;
+    background: #fff;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+
+.occasion-menu:hover .occasion-dropdown {
+    display: block;
+}
+
+.occasion-dropdown ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.occasion-dropdown li {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+.occasion-dropdown ul li a {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px !important;
+    font-weight: 500;
+    padding: 0px 22px;
+    line-height: 40px;
+    text-decoration: none;
+    transition: .25s;
+    text-align: center;
+}
+
+.occasion-dropdown li a::after {
+    display: none;
+}
+
+.occasion-dropdown li a:hover {
+    background: #f2f2f2;
+    padding-left: 25px;
+}
+
+.occasion-dropdown li:hover a {
+    color: #000;
+}
+
+.occasion-dropdown li:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #82E600;
+}
+
+.occasion-dropdown ul li a {
+    color: #000 !important;
+}
+
+.bottom-nav:hover::after {
+    width: 100%;
+}
+
+.icon-search {
+    width: 18px;
+    cursor: pointer;
+}
+
+.mobile-nav-container {
+    justify-content: space-between;
+    display: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-around;
+    margin: 60px;
+    background-color: #fafafa;
+    padding: 35px;
+}
+
+.ship {
+    display: flex;
+}
+
+.ship p {
+    padding-top: 10px;
+    font-size: 14px;
+    text-wrap: nowrap;
+}
+
+.Audio img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.Audio {
+    padding: 0px 45px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.Audio span a {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 85px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*hero section*/
+
+.hero-2 {
+    display: flex;
+}
+
+.Power {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 45px;
+    padding-right: 0px;
+}
+
+.Power img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.Power span a {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 85px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Smart {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 45px 0px;
+    margin-left: 0px;
+}
+
+.Smart img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.Smart span a {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 85px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.personal-care {
+    position: relative;
+    display: inline-block;
+    width: 85%;
+    padding: 20px 45px;
+    padding-right: 0px;
+}
+
+.personal-care img {
+    width: 575px;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.personal-care span a {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 85px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.home-appliances {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 0px 0px 45px;
+    margin-left: 0px;
+}
+
+.home-appliances img {
+    width: 93%;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.home-appliances span a {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 85px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.oraimo-home {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 0px 0px 45px;
+    margin-left: 0px;
+}
+
+.oraimo-home img {
+    width: 575px;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.oraimo-home span a {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 85px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.oraimo-baby {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 0px 0px 4px;
+    margin-left: 0px;
+}
+
+.oraimo-baby img {
+    width: 575px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.oraimo-baby span a {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 85px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tab-header {
+    margin: 40px;
+    padding-left: 560px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cards,
+.image-slide {
+    display: flex;
+    gap: 50px;
+    overflow: hidden;
+    padding: 0px 40px;
+}
+
+#card,
+#img {
+    width: calc((100% - (40px * 3)) / 4);
+    animation: slides 27s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes slides {
+
+    0%,
+    9.99% {
+        transform: translateX(0px);
+    }
+
+    11.11%,
+    21.1% {
+        transform: translateX(-360.28px);
+    }
+
+    22.22%,
+    32.21% {
+        transform: translateX(calc(-360.28px*2));
+    }
+
+    33.33%,
+    43.32% {
+        transform: translateX(calc(-360.28px*3));
+    }
+
+    44.44%,
+    54.43% {
+        transform: translateX(calc(-360.28px*4));
+    }
+
+    55.55%,
+    65.54% {
+        transform: translateX(calc(-360.28px*5));
+    }
+
+    66.66%,
+    76.65% {
+        transform: translateX(calc(-360.28px*6));
+    }
+
+    77.77%,
+    87.76% {
+        transform: translateX(calc(-360.28px*7));
+    }
+
+    88.88%,
+    98.87% {
+        transform: translateX(calc(-360.28px*8));
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+.arrival {
+    margin: 40px;
+    padding-left: 560px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.new-arrival {
+    margin: 40px 45px;
+}
+
+.cont {
+    background-color: white;
+    width: 100%;
+    padding-top: 0px;
+    padding: 0px 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 30px;
+}
+
+.image-box {
+    position: relative;
+}
+
+.image-box img {
+    width: 100%;
+    background-color: #F8F8F8;
+}
+
+.image-box span {
+    background-color: #82E600;
+    border-radius: 40px;
+    position: absolute;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    top: 10px;
+    left: 10px;
+}
+
+.keyboard-main span a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.content {
+    margin-bottom: 50px;
+}
+
+.keyboard {
+    display: flex;
+
+}
+
+.keyboard img {
+    width: 6%;
+}
+
+.keyboard p {
+    margin-top: 12px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.price span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.price del {
+    font-size: 10px;
+}
+
+.buy {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+}
+
+.content:hover .price {
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.content:hover .buy {
+    opacity: 1;
+    transition: 0.3s linear;
+    color: black;
+}
+
+.btn-1 button {
+    border: 1px solid rgb(41, 39, 39);
+    border-radius: 50px;
+    padding: 7px 17px;
+    background-color: transparent;
+}
+
+.btn-2 button {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    padding: 7px 17px;
+    border: solid;
+}
+
+.brand {
+    margin: 40px;
+    padding-left: 500px;
+    font-weight: 650;
+    font-size: 32px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.users img {
+    width: 100%;
+}
+
+.socials {
+    background-color: #191919;
+    padding: 9px 40px;
+
+}
+
+.socials p {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.socials img {
+    margin-right: 40px;
+}
+
+.socials-content {
+    display: flex;
+}
+
+.socials-r {
+    justify-content: space-between;
+    padding-left: 450px;
+}
+
+.socials-r img {
+    width: 6%;
+
+}
+
+.stores img {
+    width: 30%;
+}
+
+.footer {
+    background: #000;
+    padding: 55px 65px 40px;
+}
+
+.newsletter {
+    text-align: center;
+    color: white;
+
+}
+
+.newsletter h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.newsletter p {
+    font-size: 20px;
+    margin: 12px 0px 22px;
+}
+
+.subscribe {
+    width: 500px;
+    height: 50px;
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.subscribe input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    background: #f3f3f3;
+    padding: 26px 48px;
+    font-size: 20px;
+    color: black;
+}
+
+.subscribe button {
+    width: 96px;
+    background: #000;
+    border: 0;
+    border-left: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.radio {
+    width: 12px;
+    height: 12px;
+}
+
+.agree {
+    display: block;
+    margin: 25px auto 70px;
+    width: 760px;
+    max-width: 95%;
+    text-align: left;
+    color: #9b9b9b;
+    font-size: 14px;
+    padding-left: 130px;
+}
+
+.agree input {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 1px;
+}
+
+.agree a {
+    color: #82E600;
+    font-size: 14px;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 90px;
+}
+
+.links h3 {
+    font-size: 16px;
+    margin-bottom: 36px;
+    color: white;
+}
+
+.links>div img {
+    display: none;
+}
+
+.links p,
+.links a,
+.links strong {
+    display: block;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #d2d2d2;
+    text-decoration: none;
+    margin-bottom: 18px;
+}
+
+.links strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+.copyright {
+    background: #191919;
+    padding: 22px 0px 12px;
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    padding-top: 9px;
+}
+
+.why {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+}
+
+.why-title {
+    margin: 0 0 40px;
+    font-size: 26px;
+    text-align: center;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 287px 218px 218px;
+    gap: 16px;
+    background-color: #f5f6f7;
+}
+
+.cell {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 24px;
+    border-radius: 24px;
+    background: #fff;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cell:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.cell h2 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    max-width: 70%;
+    font-size: 15px;
+    line-height: 1.35;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+
+}
+
+.cell img {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 46%;
+    max-width: 190px;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.c-warranty img {
+    width: 100;
+}
+
+.c-service {
+    grid-row: span 2;
+}
+
+.c-service h2 {
+    max-width: 60%;
+    font-size: 20px;
+}
+
+.c-service img {
+    width: 70%;
+    max-width: 320px;
+    right: 10;
+    bottom: 0;
+}
+
+.c-auth img {
+    width: 100%;
+}
+
+.c-club {
+    grid-column: span 2;
+}
+
+.c-club img {
+    width: 100%;
+}
+
+.c-shipping {
+    grid-column: span 2;
+}
+
+
+.no1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 2;
+    background-color: #92E920;
+    overflow: hidden;
+}
+
+.no1 img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.layer-1 {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    width: 90%;
+    height: 200%;
+    background: #B1EF60;
+}
+
+.layer-2 {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    height: 80%;
+    width: 80%;
+    background: #A1EC40;
+}
+
+.layer-3 {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    height: 75%;
+    width: 75%;
+    background: #92E920;
+}
+
+.layer-4 {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    height: 70%;
+    width: 70%;
+    background: #82E600;
+}
+
+.layer-4 img {
+    width: 100%;
+}
+
+
+.oraimo-club {
+    font-size: 36px;
+    margin: 0 38px;
+    padding: 0 6px;
+    color: black;
+}
+
+.join a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    border: 7px solid black;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.explorer {
+    font-size: 20px;
+}
+
+.account {
+    position: relative;
+    display: inline-block;
+}
+
+.signup-btn {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 12px 18px;
+}
+
+.account-dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: -40px;
+
+    width: 290px;
+    height: 370px;
+
+    background: #fff;
+    border-radius: 10px;
+
+    padding: 28px 30px 18px;
+
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.12);
+
+    z-index: 1000;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transform: translateY(8px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+}
+
+
+.account-dropdown::before {
+    content: "";
+    position: absolute;
+
+
+    left: 0;
+
+    width: 100%;
+    height: 12px;
+}
+
+.account:hover .account-dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.account-dropdown h2 {
+    font-size: 24px;
+    font-weight: 700;
+
+    color: #111;
+
+    margin-bottom: 16px;
+}
+
+.register {
+    height: 47px;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 0 12px;
+
+    background: #f7fff0;
+
+    border: 1px solid #e4f3d5;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    color: #111;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gift-icon {
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gift-icon svg {
+    width: 19px;
+    height: 19px;
+
+    fill: none;
+
+    stroke: #82e600;
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+
+    background: #e8e8e8;
+
+    margin: 10px 0 3px;
+}
+
+.account-dropdown>a:not(.register) {
+    display: flex;
+    align-items: center;
+
+    height: 33px;
+
+    text-decoration: none;
+
+    color: #111;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    transition: color 0.15s ease;
+}
+
+
+.account-dropdown>a:not(.register):hover {
+    color: #82e600;
+}
+
+
+.register:hover {
+    background: #f3ffeb;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        padding: 10px 24px;
+    }
+
+    .notice-bar {
+        width: 45%;
+        padding: 0 10px;
+    }
+
+    .bottom-nav ul li {
+        margin-right: 20px;
+    }
+
+    .hero {
+        margin: 30px 24px;
+        padding: 24px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .hero-2 {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .hero-2 img {
+        display: flex;
+    }
+
+    .Power,
+    .Smart,
+    .personal-care,
+    .home-appliances,
+    .oraimo-home,
+    .oraimo-baby {
+        width: 50%;
+        padding: 15px 20px;
+    }
+
+    .personal-care img,
+    .oraimo-home img,
+    .oraimo-baby img {
+        width: 100%;
+    }
+
+    .tab-header,
+    .arrival {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .cards,
+    .image-slide {
+        gap: 24px;
+        padding: 0 24px;
+    }
+
+    #card,
+    #img {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .cont {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 24px;
+        column-gap: 24px;
+    }
+
+    .socials {
+        padding: 9px 24px;
+    }
+
+    .socials-r {
+        padding-left: 100px;
+    }
+
+    .links {
+        gap: 40px;
+    }
+
+    .why {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .c-service,
+    .c-club,
+    .c-shipping,
+    .no1 {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        padding: 8px 14px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .oraimo-logo {
+        width: 150px;
+        height: 42px;
+        margin-top: 8px;
+        padding-left: 0;
+    }
+
+    .img2 {
+        padding-right: 10px;
+    }
+
+    .notice-bar {
+        order: 3;
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .bottom-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bottom-nav ul li {
+        margin-right: 16px;
+        padding: 10px 0;
+    }
+
+    .occasion-dropdown {
+        top: 45px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+    }
+
+    .hero {
+        margin: 20px 14px;
+        padding: 18px;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .ship {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .ship p {
+        font-size: 12px;
+    }
+
+    .Audio {
+        padding: 0;
+    }
+
+    .Audio span a {
+        top: 14px;
+        left: 35px;
+        font-size: 15px;
+    }
+
+    .hero-2 {
+        display: block;
+    }
+
+    .Power,
+    .Smart,
+    .personal-care,
+    .home-appliances,
+    .oraimo-home,
+    .oraimo-baby {
+        width: 100%;
+        padding: 10px 14px;
+        margin: 0;
+    }
+
+    .Power span a,
+    .Smart span a,
+    .personal-care span a,
+    .home-appliances span a,
+    .oraimo-home span a,
+    .oraimo-baby span a {
+        top: 25px;
+        left: 35px;
+        font-size: 16px;
+    }
+
+    .tab-header,
+    .arrival {
+        margin: 28px 14px;
+        padding-left: 0;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .cards,
+    .image-slide {
+        gap: 14px;
+        padding: 0 14px;
+    }
+
+    #card,
+    #img {
+        width: calc(100% - 28px);
+    }
+
+    .cont {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 14px;
+        column-gap: 12px;
+        row-gap: 24px;
+    }
+
+    .content {
+        margin-bottom: 20px;
+    }
+
+    .keyboard-main span a {
+        font-size: 14px;
+    }
+
+    .price span {
+        font-size: 16px;
+    }
+
+    .buy {
+        gap: 5px;
+    }
+
+    .btn-1 button,
+    .btn-2 button {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .users img {
+        width: 100%;
+    }
+
+    .socials {
+        padding: 12px 14px;
+    }
+
+    .socials-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .socials-r {
+        padding-left: 0;
+    }
+
+    .socials-r img {
+        width: 12%;
+        margin-right: 12px;
+    }
+
+    .stores img {
+        width: 45%;
+    }
+
+    .footer {
+        padding: 40px 20px 30px;
+    }
+
+    .newsletter h2 {
+        font-size: 25px;
+    }
+
+    .newsletter p {
+        font-size: 15px;
+    }
+
+    .subscribe {
+        width: 100%;
+        max-width: 100%;
+        height: 46px;
+    }
+
+    .subscribe input {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    .subscribe button {
+        width: 70px;
+    }
+
+    .agree {
+        width: 100%;
+        max-width: 100%;
+        margin: 25px auto 45px;
+        font-size: 13px;
+    }
+
+    .agree input {
+        width: 18px;
+        height: 18px;
+        margin-right: 7px;
+    }
+
+    .links {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+    }
+
+    .links h3 {
+        font-size: 10px;
+        margin-bottom: 1px;
+    }
+
+    .links p,
+    .links a,
+    .links strong {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .copyright {
+        padding: 16px 10px 10px;
+    }
+
+    .why {
+        padding: 40px 14px 60px;
+    }
+
+    .why-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 12px;
+    }
+
+    .cell,
+    .c-service,
+    .c-club,
+    .c-shipping,
+    .no1 {
+        grid-column: span 1;
+        grid-row: span 1;
+        min-height: 220px;
+        padding: 20px;
+    }
+
+    .cell h2,
+    .c-service h2 {
+        max-width: 70%;
+        font-size: 14px;
+    }
+
+    .cell img {
+        width: 45%;
+        max-width: 160px;
+    }
+
+    .c-service img {
+        width: 65%;
+        max-width: 240px;
+    }
+
+    .oraimo-club {
+        font-size: 26px;
+        margin: 0 20px;
+    }
+
+    .chatbot {
+        right: 12px;
+        width: 48px;
+    }
+}
+
+@media (max-width: 420px) {
+    .oraimo-logo {
+        width: 125px;
+    }
+
+    .nav {
+        padding: 3px 14px;
+        flex-wrap: wrap;
+        gap: 8px;
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .mobile-nav-container {
+        justify-content: space-between;
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .mobile-nav-icons {
+        padding-top: 20px;
+    }
+
+    .mobile-nav-icons img {
+        width: 28px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .dropdown,
+    .notice-bar,
+    .x {
+        display: none;
+    }
+
+    .bottom-nav ul li {
+        margin-right: 10px;
+        display: none;
+    }
+
+    .bottom-nav ul li a {
+        font-size: 12px;
+    }
+
+    .Audio {
+        display: flex;
+    }
+
+    .cont {
+        gap: 20px 10px;
+        padding: 0 10px;
+    }
+
+    .ship {
+        display: none;
+    }
+
+    .keyboard-main span a {
+        font-size: 12px;
+    }
+
+    .keyboard p {
+        font-size: 10px;
+    }
+
+    .price span {
+        font-size: 14px;
+    }
+
+    .btn-1 button,
+    .btn-2 button {
+        padding: 5px 7px;
+        font-size: 10px;
+    }
+
+    .explorer {
+        font-size: .65rem;
+    }
+
+
+    .links {
+        grid-template-columns: 1fr;
+    }
+
+    .links a,
+    .links p {
+        display: none;
+    }
+
+    .links h3 {
+        font-size: 10px;
+        margin-bottom: 1px;
+        margin-top: 1px;
+        display: flex;
+    }
+
+    .links>div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .links>div h3 {
+        margin: 0;
+    }
+
+    .links>div img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .subscribe input {
+        padding-left: 14px;
+        font-size: 12px;
+    }
+
+    .radio {
+        width: 5px;
+        height: 5px;
+    }
+
+    .agree,
+    .agree a {
+        text-align: left;
+        padding-left: 0px;
+        font-size: 9px;
+    }
+
+    .socials p {
+        display: none;
+    }
+
+    .socials-content img {
+        width: 25px;
+        margin-right: 15px;
+        padding-top: 10px;
+    }
+
+    .socials-r img {
+        display: none;
+    }
+
+    .stores {
+        display: none;
+    }
+}
